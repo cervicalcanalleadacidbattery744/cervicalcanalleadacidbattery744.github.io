@@ -42,7 +42,10 @@ nav a:hover{color:var(--accent)}
 .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:end;padding:4rem 0 4.5rem;border-bottom:1px solid var(--line)}
 .hero h1{font:800 clamp(3rem,9vw,6.5rem)/.92 var(--head);letter-spacing:-.03em;margin:0 0 1.5rem}
 .hero p.lead{font-size:1.3rem;max-width:40ch;margin:0;color:var(--muted)}
-.ledger{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:4px;padding:1.25rem 1.5rem;font:500 .95rem/1.5 var(--head)}
+.side{display:grid;gap:1.75rem;justify-items:start}
+.portrait{width:176px;height:176px;margin:8px;padding:5px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 0 6px var(--bg),0 0 0 8px var(--brass)}
+.portrait img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.ledger{width:100%;background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:4px;padding:1.25rem 1.5rem;font:500 .95rem/1.5 var(--head)}
 .ledger dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.25rem}
 .ledger dt{color:var(--muted)}
 .ledger dd{margin:0}
@@ -79,6 +82,7 @@ footer p{margin:0 0 .4rem}
 @media (max-width:760px){
   .hero,.about{grid-template-columns:1fr;gap:2rem}
   .hero{padding:2.5rem 0 3rem}
+  .portrait{width:148px;height:148px}
   section{padding:3rem 0}
   .vault{grid-template-columns:1fr}
   .vault>.box{grid-column:auto!important}
@@ -104,6 +108,8 @@ footer p{margin:0 0 .4rem}
         <h1>Piyush Praveen</h1>
         <p class="lead">Cyber security leader with 14 years in identity and privileged access. I lead teams, shape strategy and drive security transformation and I share what I learn along the way.</p>
       </div>
+      <div class="side">
+        <div class="portrait"><img src="piyush-praveen.png" width="568" height="568" alt="Portrait of Piyush Praveen"></div>
       <aside class="ledger" aria-label="At a glance">
         <dl>
           <dt>Role</dt><dd>PAM Leader</dd>
@@ -112,6 +118,7 @@ footer p{margin:0 0 .4rem}
           <dt>Here to</dt><dd class="ok">Share and keep learning</dd>
         </dl>
       </aside>
+      </div>
     </div>
 
     <section id="about" class="about">
