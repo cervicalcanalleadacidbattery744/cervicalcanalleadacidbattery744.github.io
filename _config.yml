@@ -1,0 +1,16 @@
+title: Piyush Praveen
+url: https://piyushpraveen.com
+markdown: kramdown
+future: true
+collections:
+  breaches:
+    output: true
+    permalink: /breaches/:name/
+defaults:
+  - scope:
+      path: ""
+      type: breaches
+    values:
+      layout: post
+exclude:
+  - README.md
