@@ -15,7 +15,7 @@ Hosted on GitHub Pages at [piyushpraveen.com](https://piyushpraveen.com).
 | `_layouts/` and `_includes/` | Page templates plus the shared header and footer. |
 | `breaches/index.html` | The Breach analyses list page. |
 | `_breaches/` | One Markdown file per breach analysis. |
-| `_templates/breach-template.md` | A blank template to copy for each new analysis. |
+| `_templates/breach-template.txt` | A blank template to copy for each new analysis. |
 | `_config.yml` | Site settings. |
 
 ## What the site will cover
@@ -49,7 +49,7 @@ Everything below can be done from github.com in a browser. GitHub Pages redeploy
 
 **Add a new breach analysis**
 
-1. Open `_templates/breach-template.md` and copy its contents.
+1. Open `_templates/breach-template.txt` and copy its contents.
 2. In the `_breaches` folder choose **Add file**, then **Create new file**.
 3. Name it after the breach such as `capital-one-2019.md`.
 4. Paste the template and fill in the title and date and tags and summary. Then write each section.
